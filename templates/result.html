@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <h1>Pokémon encontrado: {{ nombre }}</h1>
+  <img src="{{ imagen }}" alt="Imagen de {{ nombre }}">
+  <p><strong>Altura:</strong> {{ altura }} m</p>
+  <p><strong>Peso:</strong> {{ peso }} kg</p>
+  <p><strong>Habilidades:</strong></p>
+  <ul>
+    {% for habilidad in habilidades %}
+      <li>{{ habilidad }}</li>
+    {% endfor %}
+  </ul>
+  <br><a href="/">Buscar otro</a>
+</body>
+</html>
